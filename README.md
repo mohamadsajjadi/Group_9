@@ -8,4 +8,4 @@ Mohamad sajadian 98170862
 
 mahdi sharifkhani 98110051
 
-Sqdegh Mahmoudabadi 98106037
+Sadegh Mahmoudabadi 98106037
