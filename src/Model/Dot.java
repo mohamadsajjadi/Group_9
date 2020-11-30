@@ -61,6 +61,10 @@ import java.util.*;
         public static void setAvailableDots(ArrayList<Dot> availableDot) {
             availableDots = availableDot;
         }
+        public void addSideDot(Dot dot){
+            System.out.println("hellooo");
+        }
+
 
     }
 
