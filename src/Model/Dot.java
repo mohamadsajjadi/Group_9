@@ -64,7 +64,9 @@ import java.util.*;
         public void addSideDot(Dot dot){
             System.out.println("hellooo");
         }
-
+        public  static void showTable(Dot dot){
+            System.out.println("hey you");
+        }
 
     }
 
