@@ -57,7 +57,7 @@ public class Dot {
     public static void addDot(Dot dot) {
         int x = dot.getXPosition();
         int y = dot.getYPosition();
-        dots.put(x*10 + y, dot)
+        dots.put(x*10 + y, dot);
     }
 
     public static void addAvailableDot(Dot availableDot) {
@@ -65,12 +65,19 @@ public class Dot {
     }
 
     public boolean isSideDotAvailable(Dot sideDot) {
-        if (this.sideDots.contain(sideDot)) {
+        if (this.sideDots.contains(sideDot)) {
             return true;
         } else {
             return false;
         }
     }
+
+    public static void removeAvailableDot(Dot dot) {
+        if (availableDots.contains(dot)) {
+            availableDots.remove(dot);
+        } else{ }
+    }
+
 
 }
 
