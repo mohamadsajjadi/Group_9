@@ -75,10 +75,16 @@ public class Dot {
     public static void removeAvailableDot(Dot dot) {
         if (availableDots.contains(dot)) {
             availableDots.remove(dot);
-        } else{ }
+        }
     }
 
-
+    public static boolean isAvailableDot(Dot dot) {
+        if (availableDots.contains(dot)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 
