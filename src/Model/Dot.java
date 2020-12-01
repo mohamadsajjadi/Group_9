@@ -15,26 +15,26 @@ public class Dot {
     }
 
     public int getXPosition() {
-        return XPosition;
+        return this.XPosition;
     }
 
     public int getYPosition() {
-        return YPosition;
+        return this.YPosition;
     }
 
     public ArrayList<Dot> getSideDots() {
-        return sideDots;
+        return this.sideDots;
     }
 
     public int getSideDotsNum() {
-        return sideDotsNum;
+        return this.sideDotsNum;
     }
 
-    public HashMap<Integer, Dot> getDots() {
+    public static HashMap<Integer, Dot> getDots() {
         return dots;
     }
 
-    public ArrayList<Dot> getAvailableDots() {
+    public static ArrayList<Dot> getAvailableDots() {
         return availableDots;
     }
 
@@ -46,22 +46,31 @@ public class Dot {
         this.YPosition = yPosition;
     }
 
-    public void setSideDots(ArrayList<Dot> sideDots) {
-        this.sideDots = sideDots;
+    public void addSideDot(Dot sideDot) {
+        this.sideDots.add(sideDot);
     }
 
     public void setSideDotsNum(int sideDotsNum) {
         this.sideDotsNum = sideDotsNum;
     }
 
-    public static void setDots(HashMap<Integer, Dot> dot) {
-        dots = dot;
+    public static void addDot(Dot dot) {
+        int x = dot.getXPosition();
+        int y = dot.getYPosition();
+        dots.put(x*10 + y, dot)
     }
 
-    public static void setAvailableDots(ArrayList<Dot> availableDot) {
-        availableDots = availableDot;
+    public static void addAvailableDot(Dot availableDot) {
+        availableDots.add(availableDot);
     }
 
+    public boolean isSideDotAvailable(Dot sideDot) {
+        if (this.sideDots.contain(sideDot)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
 
