@@ -1,5 +1,4 @@
 package Model;
-
 import java.util.*;
 
 public class Line {
@@ -36,6 +35,22 @@ public class Line {
 
     public int getyFinish() {
         return yFinish;
+    }
+
+    public static void addLine(Line line) {
+
+    }
+
+    public static void removeAvailabe(Line line) {
+
+    }
+
+    public static boolean isLineAvailable(Line line) {
+
+    }
+
+    public static void drawLine(int x1, int y1, int x2, int y2) {
+
     }
 
 }
