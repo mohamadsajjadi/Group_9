@@ -14,9 +14,11 @@ public class Box {
         this.dot4 = dot4;
     }
     public static void addBox(Box box){
-
+        boxes.add(box);
     }
-    public static boolean isBoxMade(Line line){
+    public static int howManyBoxesMade(Line line){      //not complete
+        int counter = 0;
 
+        return counter;
     }
 }

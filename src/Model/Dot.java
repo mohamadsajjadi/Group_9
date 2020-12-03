@@ -86,4 +86,9 @@ public class Dot {
             return false;
         }
     }
+
+    public static Dot getDotByPosition(int x, int y) {
+        int position = x*10 + y;
+        return dots.get(position);
+    }
 }
