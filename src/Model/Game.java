@@ -1,7 +1,5 @@
 package Model;
 
-import com.sun.deploy.security.SelectableSecurityManager;
-
 import java.util.*;
 
 public class Game {
@@ -9,14 +7,11 @@ public class Game {
     private Player p2;
     private int turn;
     private Scanner scanner;
-
-
     Random generator = new Random();
 
     {
         turn = generator.nextInt(2);
     }
-
 
     public void setP1(Player p1) {
         this.p1 = p1;
@@ -29,7 +24,6 @@ public class Game {
     public void setTurn() {
         int win1 = p1.getWins();
         int win2 = p2.getWins();
-
         if (win1 > win2) {
             turn = 0;
         } else if (win1 < win2) {
@@ -48,10 +42,8 @@ public class Game {
     public Player whoIsTurn() {
         if (turn == 1) {
             return p1;
-
         } else
             return p2;
-
     }
 
     public void checkTable(Line line) {
@@ -59,12 +51,12 @@ public class Game {
         if (count == 0) {
             changeTurn();
         } else if (count == 1) {
-            whoIsTurn();
-
+            Player player = whoIsTurn();
+            player.incrementScore();
         } else if (count == 2) {
-            whoIsTurn();
-
+            Player player = whoIsTurn();
+            player.incrementScore();
+            player.incrementScore();
         }
-
     }
 }
