@@ -20,7 +20,6 @@ public class Line {
         this.yStart = startDot.getYPosition();
         this.xFinish = finishDot.getXPosition();
         this.yFinish = finishDot.getYPosition();
-
     }
 
     public Dot getStartDot() {
@@ -89,4 +88,7 @@ public class Line {
         return null;
     }
 
+    public static ArrayList<Line> getAvailableLines() {
+        return availableLines;
+    }
 }
