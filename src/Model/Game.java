@@ -1,11 +1,14 @@
 package Model;
 
+import com.sun.deploy.security.SelectableSecurityManager;
+
 import java.util.*;
 
 public class Game {
     private Player p1;
     private Player p2;
     private int turn;
+    private Scanner scanner;
 
 
     Random generator = new Random();
@@ -36,11 +39,18 @@ public class Game {
     }
 
     public void changeTurn() {
-
+        if (turn == 0) {
+            turn = 1;
+        } else
+            turn = 0;
     }
 
     public Player whoIsTurn() {
+        if (turn == 1) {
+            return p1;
 
+        } else
+            return p2;
 
     }
 
