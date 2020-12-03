@@ -1,6 +1,8 @@
 package Model;
+
 import java.util.*;
 
+@SuppressWarnings("ALL")
 public class Line {
     private Dot startDot;
     private Dot finishDot;
@@ -20,6 +22,7 @@ public class Line {
         this.yFinish = finishDot.getYPosition();
 
     }
+
 
     public int getxStart() {
         return xStart;

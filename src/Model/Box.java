@@ -1,5 +1,7 @@
 package Model;
 import java.util.*;
+
+@SuppressWarnings("ALL")
 public class Box {
     private Dot dot1 ;
     private Dot dot2 ;

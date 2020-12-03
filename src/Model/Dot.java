@@ -2,9 +2,10 @@ package Model;
 
 import java.util.*;
 
+@SuppressWarnings("ALL")
 public class Dot {
-    private int XPosition;
-    private int YPosition;
+    private int xPosition;
+    private int yPosition;
     private ArrayList<Dot> sideDots;
     private int sideDotsNum;
     private static HashMap<Integer, Dot> dots = new HashMap<>();
@@ -14,12 +15,17 @@ public class Dot {
         sideDots = new ArrayList<>();
     }
 
+    public Dot(int xPosition, int yPosition) {
+        this.xPosition = xPosition;
+        this.yPosition = yPosition;
+    }
+
     public int getXPosition() {
-        return this.XPosition;
+        return this.xPosition;
     }
 
     public int getYPosition() {
-        return this.YPosition;
+        return this.yPosition;
     }
 
     public ArrayList<Dot> getSideDots() {
@@ -38,12 +44,12 @@ public class Dot {
         return availableDots;
     }
 
-    public void setXPosition(int xPosition) {
-        this.XPosition = xPosition;
+    public void setxPosition(int xPosition) {
+        this.xPosition = xPosition;
     }
 
-    public void setYPosition(int yPosition) {
-        this.YPosition = yPosition;
+    public void setyPosition(int yPosition) {
+        this.yPosition = yPosition;
     }
 
     public void addSideDot(Dot sideDot) {
@@ -75,8 +81,8 @@ public class Dot {
     public static void removeAvailableDot(Dot dot) {
         if (availableDots.contains(dot)) {
             availableDots.remove(dot);
-        } else {
         }
+
     }
 
     public static boolean isAvailableDot(Dot dot) {
@@ -88,7 +94,17 @@ public class Dot {
     }
 
     public static Dot getDotByPosition(int x, int y) {
-        int position = x*10 + y;
+        int position = x * 10 + y;
         return dots.get(position);
     }
+
+    public void addSideDots(Dot dot) {
+        this.sideDots.add(dot);
+    }
+
+    public void decrementSideDotsNum() {
+        this.sideDotsNum--;
+
+    }
+
 }
