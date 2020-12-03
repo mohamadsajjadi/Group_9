@@ -7,4 +7,8 @@ public class Player {
     public Player(String user) {
         this.user = user;
     }
+
+    public int getScore() {
+        return score;
+    }
 }
