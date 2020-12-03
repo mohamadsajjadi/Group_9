@@ -1,11 +1,17 @@
 package Model;
 
 import java.util.*;
+
 public class Game {
     private Player p1;
     private Player p2;
     private int turn;
 
+    Random generator = new Random();
+
+    {
+        turn = generator.nextInt(2);
+    }
 
 
     public void setP1(Player p1) {
@@ -32,7 +38,7 @@ public class Game {
         } else if (count == 1) {
             whoIsTurn();
 
-        } else if(count == 2){
+        } else if (count == 2) {
             whoIsTurn();
 
         }
