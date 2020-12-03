@@ -1,9 +1,7 @@
 package Controller;
 
 import Model.*;
-
-
-import java.util.Scanner;
+import java.util.*;
 
 public class Controller {
     private Scanner scanner;

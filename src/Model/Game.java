@@ -7,6 +7,7 @@ public class Game {
     private Player p2;
     private int turn;
 
+
     Random generator = new Random();
 
     {
@@ -20,6 +21,18 @@ public class Game {
 
     public void setP2(Player p2) {
         this.p2 = p2;
+    }
+
+    public void setTurn() {
+        int win1 = p1.getWins();
+        int win2 = p2.getWins();
+
+        if (win1 > win2) {
+            turn = 0;
+        } else if (win1 < win2) {
+            turn = 1;
+        } else
+            turn = generator.nextInt(2);
     }
 
     public void changeTurn() {
