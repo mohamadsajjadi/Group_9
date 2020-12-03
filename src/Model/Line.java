@@ -23,6 +23,13 @@ public class Line {
 
     }
 
+    public Dot getStartDot() {
+        return startDot;
+    }
+
+    public Dot getFinishDot() {
+        return finishDot;
+    }
 
     public int getxStart() {
         return xStart;
