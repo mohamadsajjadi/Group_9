@@ -1,8 +1,10 @@
 package Controller;
 
 
+import Model.Dot;
 import Model.Game;
 import Model.Line;
+import Model.Player;
 import View.View;
 
 import java.util.*;
@@ -22,10 +24,26 @@ public class Controller {
         while (Line.getAvailableLines().size() != 0) {
             command = scanner.nextLine();
             if (command.equalsIgnoreCase("start dot and boxes game")) {
+                for(int i =1 ; i<9 ; i++){
+                    for(int j =1 ; j<=i ; j++){
+                        System.out.print(". ");
+                        Dot dot = new Dot(i,j) ;
+                        Dot.addDot(dot);
+                    }
+                    System.out.println("\t");
+                }
+                //add side dots
 
-            } else if (command.equalsIgnoreCase("end of my turn")) {
+              //  Player p1 = new Player(p1.getUser() ,p1.getWins());
+                //get players from plato
 
-            } else if (command.equalsIgnoreCase("draw line between (x,y) and (x,y)")) {
+            }
+            else if (command.equalsIgnoreCase("end of my turn")) {
+
+
+            }
+            else if (command.startsWith("draw line between (x,y) and (x,y)")) {
+
 
             } else if (command.equalsIgnoreCase("end of my turn")) {
 
