@@ -47,8 +47,31 @@ public class Box {
                 }
             }
         } else {
-
+            if (line.getxStart() > 1) {
+                Dot leftStartDot = Dot.getDotByPosition(line.getxStart() - 1, line.getyStart());
+                Dot leftFinishDot = Dot.getDotByPosition(line.getxFinish() - 1, line.getyFinish());
+                if (Line.isConnected(line.getStartDot(), leftStartDot)) {
+                    if (Line.isConnected(line.getFinishDot(), leftFinishDot)) {
+                        if (Line.isConnected(leftStartDot, leftFinishDot)) {
+                            counter++;
+                        }
+                    }
+                }
+            }
+            if (line.getxStart() < 8) {
+                Dot rightStartDot = Dot.getDotByPosition(line.getxStart() + 1, line.getyStart());
+                Dot rightFinishDot = Dot.getDotByPosition(line.getxFinish() + 1, line.getyFinish());
+                if (Line.isConnected(line.getStartDot(), rightStartDot)) {
+                    if (Line.isConnected(line.getFinishDot(), rightFinishDot)) {
+                        if (Line.isConnected(rightStartDot, rightFinishDot)) {
+                            counter++;
+                        }
+                    }
+                }
+            }
         }
+
+
         return counter;
     }
 

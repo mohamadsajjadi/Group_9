@@ -2,6 +2,7 @@ package View;
 
 import Controller.Controller;
 import Model.*;
+
 import java.util.*;
 
 public class View {
@@ -13,6 +14,9 @@ public class View {
         controller = new Controller(scanner);
     }
 
+    public void showAvailableDots(){
+
+    }
 
 
 }

@@ -9,7 +9,7 @@ public class Player {
         score = 0;
     }
 
-    public Player(String user,int wins) {
+    public Player(String user, int wins) {
         this.user = user;
         this.wins = wins;
     }
@@ -22,7 +22,7 @@ public class Player {
         return score;
     }
 
-    public void incrementScore(){
+    public void incrementScore() {
         this.score++;
     }
 }
