@@ -104,7 +104,5 @@ public class Dot {
 
     public void decrementSideDotsNum() {
         this.sideDotsNum--;
-
     }
-
 }

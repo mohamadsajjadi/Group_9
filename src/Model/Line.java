@@ -91,4 +91,19 @@ public class Line {
     public static ArrayList<Line> getAvailableLines() {
         return availableLines;
     }
+
+    public static boolean isConnected(Dot dot1, Dot dot2) {
+        for (Line line : lines) {
+            if (line.getStartDot() == dot1) {
+                if (line.getFinishDot() == dot2) {
+                    return true;
+                }
+            } else if (line.getStartDot() == dot2) {
+                if (line.getFinishDot() == dot1) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
