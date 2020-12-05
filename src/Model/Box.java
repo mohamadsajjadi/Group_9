@@ -24,10 +24,25 @@ public class Box {
     public static int howManyBoxesMade(Line line) {
         int counter = 0;
         if (line.getDirection().equalsIgnoreCase("Horizontal")) {
-            if (Line.isConnected(line.getStartDot(), Dot.getDotByPosition(line.getxStart(), line.getyStart() - 1)) && line.getyStart() > 1) {
-                if (Line.isConnected(line.getFinishDot(), Dot.getDotByPosition(line.getxFinish(), line.getyFinish() - 1)) && line.getyFinish() > 1) {
-                    if (Line.isConnected(Dot.getDotByPosition(line.getxStart(), line.getyStart()-1), Dot.getDotByPosition(line.getxFinish(), line.getyFinish()-1))) {
-                        counter++;
+            if (line.getyStart() > 1) {
+                Dot upStartDot = Dot.getDotByPosition(line.getxStart(), line.getyStart() - 1);
+                Dot upFinishDot = Dot.getDotByPosition(line.getxFinish(), line.getyFinish() - 1);
+                if (Line.isConnected(line.getStartDot(), upStartDot)) {
+                    if (Line.isConnected(line.getFinishDot(), upFinishDot)) {
+                        if (Line.isConnected(upStartDot, upFinishDot)) {
+                            counter++;
+                        }
+                    }
+                }
+            }
+            if (line.getyStart() < 8) {
+                Dot downStartDot = Dot.getDotByPosition(line.getxStart(), line.getyStart() + 1);
+                Dot downFinishDot = Dot.getDotByPosition(line.getxFinish(), line.getyFinish() + 1);
+                if (Line.isConnected(line.getStartDot(), downStartDot)) {
+                    if (Line.isConnected(line.getFinishDot(), downFinishDot)) {
+                        if (Line.isConnected(downStartDot, downFinishDot)) {
+                            counter++;
+                        }
                     }
                 }
             }
