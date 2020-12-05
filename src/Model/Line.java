@@ -4,6 +4,7 @@ import java.util.*;
 
 @SuppressWarnings("ALL")
 public class Line {
+    private String direction;
     private Dot startDot;
     private Dot finishDot;
     private int xStart;
@@ -20,6 +21,7 @@ public class Line {
         this.yStart = startDot.getYPosition();
         this.xFinish = finishDot.getXPosition();
         this.yFinish = finishDot.getYPosition();
+        this.setDirection();
     }
 
     public Dot getStartDot() {
@@ -45,6 +47,18 @@ public class Line {
 
     public int getyFinish() {
         return yFinish;
+    }
+
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection() {
+        if (this.xStart == this.xFinish) {
+            this.direction = "Vertical";
+        } else {
+            this.direction = "Horizontal";
+        }
     }
 
     public static void addLine(Line line) {
