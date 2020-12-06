@@ -18,6 +18,7 @@ public class Dot {
     public Dot(int xPosition, int yPosition) {
         this.xPosition = xPosition;
         this.yPosition = yPosition;
+        System.out.println("heeeeeelllllppppp");
     }
 
     public int getXPosition() {
